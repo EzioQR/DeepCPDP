@@ -177,7 +177,7 @@ class CustomCallback(Callback):
 
 # embedding_matrix learned by ASTToken2Vec
 def embedding_layer(trainable=False, rg=None):
-    embedding_matrix_file_path = os.path.join('embedding_matrix_93x20.npy')
+    embedding_matrix_file_path = os.path.join('embedding_matrix_20.npy')
     embedding_matrix = np.load(embedding_matrix_file_path)
     return Embedding(input_dim=93, output_dim=20, embeddings_regularizer=rg, trainable=trainable,
                      weights=[embedding_matrix])
